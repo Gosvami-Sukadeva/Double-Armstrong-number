@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Double Armstrong Number in JS</title>
+    <script type="text/javascript">
+      function armstr() {
+        var arm = 0,
+          a,
+          b,
+          c,
+          d,
+          num;
+        num = Number(document.getElementById("no_input").value);
+
+        temp = num;
+        while (temp > 0) {
+          a = temp % 10;
+          temp = parseInt(temp / 10); // Converting a float value into integer // arm = arm + a*a*a;
+          arm = arm + a * a * a;
+        }
+        if (arm === num) {
+          console.log("Double Armsrong Number");
+        } else {
+          console.log("This is not a double armstrong number");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>Enter an number:</p>
+    <input id="no_input" />
+    <button onclick="armstr()">Check</button>
+    <br />
+    <br />
+  </body>
+</html>
